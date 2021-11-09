@@ -6,7 +6,7 @@ Tutorial de comandos básicos y workflow en equipo
 
 # Primeros pasos
 
-Configurar Nombre que salen en los commits
+Configurar el Nombre que sale en los commits
 ```ssh
 	git config --global user.name "michaelsordo"
 ```
@@ -14,7 +14,7 @@ Configurar Email
 ```ssh	
 	git config --global user.email michaelsordoseijo@gmail.com
 ```
-Marco de colores para los comando
+Marco de colores para los comandos
 ```ssh
 	git config --global color.ui true
 ```
@@ -31,7 +31,7 @@ Clonar repositorio
 	git clone <url>
 ```
 
-Asegurarse siempre de estar trabajando con la última version
+Asegurarse siempre de estar trabajando con la última versión
 ```ssh
 	git pull origin master
 ```
@@ -48,7 +48,7 @@ Hacemos el primer commit
 	git commit -m "Aprendiendo git"
 ```
 
-Si solo queremos añadir un archivos
+Si solo queremos añadir un archivo
 ```ssh
 	git add <archivo>
 ```
@@ -81,7 +81,7 @@ Listar todas las branch en local y remoto
 
 # Ver las diferencias entre los cambios
 
-Te permite ver las diferencias en local respecto al repositorio
+Te permite ver las diferencias en local respecto al repositorio remoto
 ```ssh
 	git diff
 ```
@@ -103,51 +103,70 @@ Descargar == PULL
 
 # Workflow en equipo
 
-Asegurarnos de que tenemos la ultima version
+1.Asegurarnos de que tenemos la ultima version
 ```ssh
 	git pull origin master
 ```
 
-Crear una branch
+2.Crear una branch
 ```ssh
 	git branch <nameBranch>
 ```
-Pasarnos a esa branch
+3.Pasarnos a esa branch
 ```ssh
 	git checkout <nameBranch>
 ```
-Modificamos código
-Añadimos todos los archivos para el commit o el archivo en cuestión
+4.Modificamos código
+
+5.Añadimos todos los archivos para el commit o el archivo en cuestión
 ```ssh
 	git add .
 ```
-Agregamos archivo/commit
-Subirlo a mi branch 
+6.Hacemos commit
+```ssh
+	git commit -m "Modificando aprendiendogit"
+```
+7.Subirlo a mi branch 
 ```ssh
 	git push -u origin <miBranch>
 ```
-Unir nuestra branch a master
-Pasarnos a master
+8.Unir nuestra branch a master. Para eso nos pasamos a master
 ```ssh
 	git checkout master
 ```
-
-Mostrar las branch que hemos "mergeado" hasta ahora
-Si solo hemos utilizado master solo aparecerá esta
+9.Mostrar las branch que hemos "mergeado" hasta ahora(No obligatorio).
 ```ssh
 	git branch --merged
 ```
-Ahora "mergeamos" nuestra branch
+10.Ahora "mergeamos" nuestra branch
 ```ssh
 	git merge <miBranchconlaquetrabaje>
 ```
-Metió los cambios ya , pero todavía está en nuestra máquina
-Lo subimos
+11.Metió los cambios ya,pero todavía está en nuestra máquina.Lo subimos.
 ```ssh
 	git push origin <master>
 ```
-Es una buena práctica limpiar las branch
+Es una buena práctica limpiar las branch(No obligatorio)
 ```ssh
 	git push origin --delete <miBranch>
 ```
 
+# Arreglando errores y fallos
+
+Teniendo ya las modificaciones realizadas y añadidos los archivos
+que hemos modificado a la working area. Luego con el comando 
+siguiente modificamos el último commit
+
+```ssh
+	git commit --ammend
+```
+
+Deshacer un commit o cambios en una rama
+```ssh
+	git reset --hard <commit_id o hash> 
+```
+
+Ver commit id
+```ssh
+	git log
+```
