@@ -1,6 +1,6 @@
 # aprendiendogit
 
-Tutorial de comandos básicos y workflow de trabajo en equipo
+Tutorial de comandos básicos y workflow en equipo
 
 <span style="display:block;text-align:center">![image](https://user-images.githubusercontent.com/49002900/140984964-8beffbf0-d941-431a-8c71-46083a042aeb.png)</span>
 
