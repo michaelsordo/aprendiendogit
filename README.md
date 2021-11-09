@@ -50,6 +50,12 @@ Si solo queremos añadir un archivos
 ```ssh
 	git add <archivo>
 ```
+
+Ver las diferencias de las modificaciones en local respecto al repositorio remoto
+```ssh
+	git diff 
+```
+
 # Trabajando con ramas
 
 Crear una branch
@@ -71,21 +77,21 @@ Listar todas las branch en local y remoto
 	git branch -a
 ```
 
-#Ver las diferencias entre los cambios
+# Ver las diferencias entre los cambios
 
 Te permite ver las diferencias en local respecto al repositorio
 ```ssh
 	git diff
 ```
 
-#Subiendo el código
+# Subiendo el código
 
 Subir == PUSH
 ```ssh
 	git push origin master
 ```
 
-#Descargando código
+# Descargando código
 
 Descargar == PULL
 ```ssh
@@ -93,7 +99,12 @@ Descargar == PULL
 ```
 
 
-#Workflow en equipo
+# Workflow en equipo
+
+Asegurarnos de que tenemos la ultima version
+```ssh
+	git pull origin master
+```
 
 Crear una branch
 ```ssh
@@ -104,6 +115,10 @@ Pasarnos a esa branch
 	git checkout <nameBranch>
 ```
 Modificamos código
+Añadimos todos los archivos para el commit o el archivo en cuestión
+```ssh
+	git add .
+```
 Agregamos archivo/commit
 Subirlo a mi branch 
 ```ssh
@@ -114,10 +129,7 @@ Pasarnos a master
 ```ssh
 	git checkout master
 ```
-Asegurarnos de que tenemos la ultima version
-```ssh
-	git pull origin master
-```
+
 Mostrar las branch que hemos "mergeado" hasta ahora
 Si solo hemos utilizado master solo aparecerá esta
 ```ssh
